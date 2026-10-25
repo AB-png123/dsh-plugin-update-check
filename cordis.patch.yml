@@ -4,4 +4,4 @@
 # 加进 dsh.profile.bundles；下面这行 insert 负责把它挂载到宿主内核上。
 - insert:
     - id: dsh-plugin-update-check
-      name: dsh-plugin-update-check
+      name: '@ab-png123/dsh-plugin-update-check'

@@ -1,6 +1,6 @@
 {
-  "name": "dsh-plugin-update-check",
-  "version": "0.1.3",
+  "name": "@ab-png123/dsh-plugin-update-check",
+  "version": "0.1.4",
   "description": "DSH 启动时自动检查已安装插件是否有新版本，并用系统通知 / Dock 角标提示（可独立运行）。",
   "type": "module",
   "main": "./lib/index.js",

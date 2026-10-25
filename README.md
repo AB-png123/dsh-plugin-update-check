@@ -1,11 +1,13 @@
 # dsh-plugin-update-check
 
-[![npm version](https://img.shields.io/npm/v/dsh-plugin-update-check.svg)](https://www.npmjs.com/package/dsh-plugin-update-check)
-[![license](https://img.shields.io/npm/l/dsh-plugin-update-check.svg)](./LICENSE)
+[![npm version](https://img.shields.io/npm/v/@ab-png123/dsh-plugin-update-check.svg)](https://www.npmjs.com/package/@ab-png123/dsh-plugin-update-check)
+[![license](https://img.shields.io/npm/l/@ab-png123/dsh-plugin-update-check.svg)](./LICENSE)
 
 DeepSeek Harness（DSH）启动后自动检查当前 profile 里已安装的插件是否有新版本；有更新时弹系统通知、写 Dock 角标，并生成一份可读报告。
 
 > A DeepSeek Harness bundle plugin that checks installed plugins for updates on startup and notifies you via native notification, Dock badge, and a Markdown report.
+
+npm 包名：`@ab-png123/dsh-plugin-update-check`（仓库名保持不变）。
 
 ## 功能
 
@@ -25,7 +27,7 @@ DeepSeek Harness（DSH）启动后自动检查当前 profile 里已安装的插�
 
 ```bash
 cd ~/.dsh/profiles/desktop
-dsh plugin --profile desktop add dsh-plugin-update-check
+dsh plugin --profile desktop add @ab-png123/dsh-plugin-update-check
 ```
 
 装完**重启 DSH** 才会加载。包内声明了 `dsh.bundle`，DSH 会自动把它加入 `dsh.profile.bundles`。
@@ -36,7 +38,7 @@ dsh plugin --profile desktop add dsh-plugin-update-check
 
 ```bash
 cd ~/.dsh/profiles/desktop
-dsh plugin --profile desktop add dsh-plugin-update-check@latest
+dsh plugin --profile desktop add @ab-png123/dsh-plugin-update-check@latest
 ```
 
 升级后同样需要重启 DSH。
@@ -45,7 +47,7 @@ dsh plugin --profile desktop add dsh-plugin-update-check@latest
 
 ```bash
 cd ~/.dsh/profiles/desktop
-dsh plugin --profile desktop remove dsh-plugin-update-check
+dsh plugin --profile desktop remove @ab-png123/dsh-plugin-update-check
 ```
 
 ## 手动检查
@@ -53,7 +55,7 @@ dsh plugin --profile desktop remove dsh-plugin-update-check
 不重启 DSH 也能手动跑一次检查：
 
 ```bash
-node ~/.dsh/profiles/desktop/node_modules/dsh-plugin-update-check/lib/check.mjs
+node ~/.dsh/profiles/desktop/node_modules/@ab-png123/dsh-plugin-update-check/lib/check.mjs
 ```
 
 可选参数：
@@ -135,7 +137,7 @@ node lib/check.mjs --no-notify --json
 # 打包后安装到本地 profile
 npm pack
 cd ~/.dsh/profiles/desktop
-dsh plugin --profile desktop add /path/to/dsh-plugin-update-check-0.1.3.tgz
+dsh plugin --profile desktop add /path/to/ab-png123-dsh-plugin-update-check-0.1.4.tgz
 ```
 
 ## License
