@@ -1,0 +1,56 @@
+{
+  "name": "dsh-plugin-update-check",
+  "version": "0.1.3",
+  "description": "DSH 启动时自动检查已安装插件是否有新版本，并用系统通知 / Dock 角标提示（可独立运行）。",
+  "type": "module",
+  "main": "./lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./check": "./lib/check.mjs",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "AB-png123",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AB-png123/dsh-plugin-update-check.git"
+  },
+  "homepage": "https://github.com/AB-png123/dsh-plugin-update-check#readme",
+  "bugs": {
+    "url": "https://github.com/AB-png123/dsh-plugin-update-check/issues"
+  },
+  "engines": {
+    "node": ">=20",
+    "dsh": ">=0.2.0-rc.1"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "dsh-bundle",
+    "dsh-market",
+    "update-check",
+    "updates",
+    "notifier",
+    "deepseek-harness"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.1-rc.3": "compatible"
+      }
+    }
+  }
+}
